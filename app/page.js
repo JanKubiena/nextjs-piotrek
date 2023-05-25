@@ -16,7 +16,7 @@ export default function Home() {
         alt="Adwokat Piotr Tomasz Woźniak"
       />
       <p>
-        Szanowni Państwo
+        Szanowni Państwo,
       </p>
       <p>
         Nazywam się Piotr Tomasz Woźniak. Jestem adwokatem od 2008 r.
