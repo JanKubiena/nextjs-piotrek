@@ -12,7 +12,7 @@ const nextConfig = {
 
 module.exports = {
     images: {
-      unoptimized: true,
+      unoptimized: false,
     },
   };
 
