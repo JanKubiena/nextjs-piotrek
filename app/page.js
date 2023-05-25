@@ -10,9 +10,9 @@ export default function Home() {
       {/* <Image className='md:hidden'
         src="/piotr-wozniak.jpg"
         priority = {true}
-        width={1000}
-        height={500}
-        quality={80}  
+        width={400}
+        height={400}
+        quality={60}  
         alt="Adwokat Piotr Tomasz Woźniak"
       /> */}
       <p>

@@ -7,9 +7,9 @@ export default function Photo(){
             <Image className='object-cover aspect-square'
             src="/piotr-wozniak.jpg"
             priority = {true}
-            width={1000}
-            height={500}
-            quality={80}  
+            width={220}
+            height={220}
+            quality={70}  
             alt="Picture of the author"
             />
         </div>
