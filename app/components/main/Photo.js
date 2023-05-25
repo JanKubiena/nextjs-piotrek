@@ -5,11 +5,11 @@ export default function Photo(){
     return (
         <div className="h-55 w-full">
             <Image className='object-cover aspect-square'
-            src="/piotr-wozniak.jpg"
+            src="/piotr-wozniak.webp"
             priority = {true}
             width={220}
             height={220}
-            quality={70}  
+            quality={75}  
             alt="Picture of the author"
             />
         </div>
