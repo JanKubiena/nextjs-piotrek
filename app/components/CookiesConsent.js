@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { useEffect } from "react";
 
 
-export default function CookiesContainer() {
+export default function CookiesConsent() {
 
     useEffect(() => {
         const consent = Cookies.get("consent");

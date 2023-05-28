@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 import Photo from "./components/main/Photo";
 import ContactDetails from "./components/main/ContactDetails";
 import SpecializationsMenu from "./components/main/SpecializationsList";
-import CookiesContainer from "./components/CookiesContainer";
+import CookiesConsent from "./components/CookiesConsent";
 import { Sora, PT_Serif } from "next/font/google";
 
 export const sora = Sora({
@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
                     <footer className="hidden mt-8 lg:block">
                         <Footer />
                     </footer>
-                    {/* <CookiesContainer/> */}
+                    {/* <CookiesConsent/> */}
                 </body>
             </html>
         </MenuContextProvider>
