@@ -47,6 +47,8 @@ export default function NavBar({pages}) {
 
     const { isMenuOpen, setIsMenuOpen } = useMenuContext();
 
+    isMenuOpen ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
+
     return(
         <nav>
             {/* closed Navbar */}
