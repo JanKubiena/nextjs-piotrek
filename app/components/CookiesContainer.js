@@ -1,6 +1,6 @@
 export default function CookiesContainer() {
     return (
-        <div className="fixed bottom-4 max-w-[1254px] mx-auto border border-pw-gold bg-white inset-x-5 md:inset-x-14 p-8 flex flex-wrap lg:flex-nowrap items-center lg:justify-between gap-5 lg:gap-[160px] z-50">
+        <div className="fixed bottom-4 max-w-[1254px] mx-auto border border-pw-gold bg-pw-gold-50 inset-x-5 md:inset-x-14 p-8 flex flex-wrap lg:flex-nowrap items-center lg:justify-between gap-5 lg:gap-[160px] z-50">
             <p className="font-sans text-xs text-charcoal">
                 Ta strona używa plików cookies (tzw. ciasteczka), które zapisują się w przeglądarce internetowej Twojego urządzenia.
                 Dzięki nim zapewniamy prawidłowe działanie strony internetowej, a także możemy lepiej dostosować ją do preferencji użytkowników.
