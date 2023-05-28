@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Photo from "./components/main/Photo";
 import ContactDetails from "./components/main/ContactDetails";
 import SpecializationsMenu from "./components/main/SpecializationsList";
+import CookiesContainer from "./components/CookiesContainer";
 import { Sora, PT_Serif } from "next/font/google";
 
 export const sora = Sora({
@@ -65,15 +66,7 @@ export default function RootLayout({ children }) {
                     <footer className="hidden mt-8 lg:block">
                         <Footer />
                     </footer>
-                        <div className="fixed bottom-4 max-w-[1254px] mx-auto border border-pw-gold bg-white inset-x-5 md:inset-x-14 p-8 flex flex-wrap lg:flex-nowrap items-center lg:justify-between gap-5 lg:gap-[160px] z-50">
-                            <p className="font-sans text-xs text-charcoal">
-                                Ta strona używa plików cookies (tzw. ciasteczka), które zapisują się w przeglądarce internetowej Twojego urządzenia.
-                                Dzięki nim zapewniamy prawidłowe działanie strony internetowej, a także możemy lepiej dostosować ją do preferencji użytkowników.
-                            </p>
-                            <button className="bg-pw-green px-4 py-2 text-white text-sm hover:bg-pw-green-800 ">
-                                Rozumiem
-                            </button>
-                        </div>
+                    <CookiesContainer/>
                 </body>
             </html>
         </MenuContextProvider>
