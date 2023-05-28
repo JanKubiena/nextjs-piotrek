@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
                     <footer className="hidden mt-8 lg:block">
                         <Footer />
                     </footer>
-                    <CookiesContainer/>
+                    {/* <CookiesContainer/> */}
                 </body>
             </html>
         </MenuContextProvider>

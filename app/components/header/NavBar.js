@@ -6,16 +6,11 @@ import Link from "next/link";
 import Logo from "./Logo";
 import IconHumburger from "./IconHamburger";
 import IconClose from './IconClose';
-import Cookies from "js-cookie";
 
 
 export default function NavBar({pages}) {
 
-    useEffect(() => {
-        const consent = Cookies.get("consent");
-        Cookies.set("consent", false, { expires: 365 });
-        // document.cookie = `consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT`
-        },[])
+
 
     const pathname = usePathname();
     
