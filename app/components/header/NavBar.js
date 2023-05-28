@@ -1,13 +1,21 @@
 'use client';
+import { useEffect } from 'react';
 import { useMenuContext } from '@/app/context/menu';
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 import Logo from "./Logo";
 import IconHumburger from "./IconHamburger";
 import IconClose from './IconClose';
+import Cookies from "js-cookie";
 
 
 export default function NavBar({pages}) {
+
+    useEffect(() => {
+        const consent = Cookies.get("consent");
+        Cookies.set("consent", false, { expires: 365 });
+        // document.cookie = `consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT`
+        },[])
 
     const pathname = usePathname();
     
@@ -47,9 +55,10 @@ export default function NavBar({pages}) {
 
     const { isMenuOpen, setIsMenuOpen } = useMenuContext();
 
-    if (typeof window === "object") {
+    useEffect(()=>{
         isMenuOpen ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
-      }
+    },[isMenuOpen])
+
 
     return(
         <nav>
