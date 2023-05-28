@@ -62,25 +62,9 @@ export default function RootLayout({ children }) {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="fixed max-w-[1366px] mx-auto bottom-4 right-[50%] left-[50%] flex border-2 border-pw-gold bg-white">
-                        <p>
-                            Ta strona używa plików cookies (tzw. ciasteczka), które zapisują się w przeglądarce internetowej Twojego urządzenia.
-                            Dzięki nim zapewniamy prawidłowe działanie strony internetowej, a także możemy lepiej dostosować ją do preferencji użytkowników.
-                        </p>
-                    </div> */}
                     <footer className="hidden mt-8 lg:block">
                         <Footer />
                     </footer>
-                        {/* <div className="fixed bottom-4 max-w-[1366px] p-8 bg-white border border-pw-gold flex flex-col gap-5 lg:items-center lg:flex-row lg:gap-20">
-                            <p className="font-sans text-charcoal">
-                                Ta strona używa plików cookies (tzw. ciasteczka), które zapisują się w przeglądarce internetowej Twojego urządzenia.
-                                Dzięki nim zapewniamy prawidłowe działanie strony internetowej, a także możemy lepiej dostosować ją do preferencji użytkowników.
-                            </p>
-                            <button className="px-4 py-2 max-h-[42px] max-w-[110px] text-white text-sm bg-pw-green">    
-                                Rozumiem
-                            </button>
-                        </div> */}
                         <div className="fixed bottom-4 max-w-[1254px] mx-auto border border-pw-gold bg-white inset-x-5 md:inset-x-14 p-8 flex flex-wrap lg:flex-nowrap items-center lg:justify-between gap-5 lg:gap-[160px] z-50">
                             <p className="font-sans text-xs text-charcoal">
                                 Ta strona używa plików cookies (tzw. ciasteczka), które zapisują się w przeglądarce internetowej Twojego urządzenia.
