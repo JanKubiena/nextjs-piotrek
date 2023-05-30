@@ -4,8 +4,10 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Photo from "./components/main/Photo";
 import ContactDetails from "./components/main/ContactDetails";
+import CookiesConsent from "./components/CookiesConsent";
 import SpecializationsMenu from "./components/main/SpecializationsList";
 import { Sora, PT_Serif } from "next/font/google";
+
 
 export const sora = Sora({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -67,7 +69,7 @@ export default function RootLayout({ children }) {
                     <footer className="hidden mt-8 lg:block">
                         <Footer />
                     </footer>
-                    {/* <CookiesConsent/> */}
+                    <CookiesConsent/>
                 </body>
             </html>
         </MenuContextProvider>
