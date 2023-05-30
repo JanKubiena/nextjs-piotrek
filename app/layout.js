@@ -5,7 +5,6 @@ import Footer from "./components/footer/Footer";
 import Photo from "./components/main/Photo";
 import ContactDetails from "./components/main/ContactDetails";
 import SpecializationsMenu from "./components/main/SpecializationsList";
-import CookiesConsent from "./components/CookiesConsent";
 import { Sora, PT_Serif } from "next/font/google";
 
 export const sora = Sora({
