@@ -10,13 +10,11 @@ export default function CookiesConsent() {
     useEffect(() => {
         const consent = Cookies.get("consent");
         consent === undefined && Cookies.set("consent", "false", { expires: 365 });
-        // document.cookie = `consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT`
         setConsent(consent)
         },[])
 
     const handleConsent = () => {
         Cookies.set("consent", "true", { expires: 365 })
-
         setConsent(Cookies.get("consent"))
     }
 
