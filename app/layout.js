@@ -8,6 +8,8 @@ import CookiesConsent from "./components/CookiesConsent";
 import SpecializationsMenu from "./components/main/SpecializationsList";
 import { Sora, PT_Serif } from "next/font/google";
 
+import Script from "next/script";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
 
 export const sora = Sora({
     weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -24,52 +26,65 @@ export const ptserif = PT_Serif({
 });
 
 export const metadata = {
-  title: {
-    default: 'Adwokat Piotr Tomasz Woźniak | Kancelaria Adwokacka Piotr Tomasz Woźniak',
-    template: '%s | Kancelaria Adwokacka Piotr Tomasz Woźniak',
-  },
-  description: 'Prawo cywilne, prawo rodzine, odszkodowania, księgi wieczyste i hipoteka, postępowania egzekucyjne, prawo bankowe i spółdzielcze',
+    title: {
+        default:
+            "Adwokat Piotr Tomasz Woźniak | Kancelaria Adwokacka Piotr Tomasz Woźniak",
+        template: "%s | Kancelaria Adwokacka Piotr Tomasz Woźniak",
+    },
+    description:
+        "Prawo cywilne, prawo rodzine, odszkodowania, księgi wieczyste i hipoteka, postępowania egzekucyjne, prawo bankowe i spółdzielcze",
 };
-
-
-
 
 export default function RootLayout({ children }) {
     return (
         <MenuContextProvider>
             <html lang="pl" className={`${sora.variable} ${ptserif.variable}`}>
-                <body className={`border-t-[16px] border-pw-gold overscroll-none pt-4 lg:pt-0`}>
-                    <div className="max-w-[1366px] mx-auto">
+                <body
+                    className={`overscroll-none border-t-[16px] border-pw-gold pt-4 lg:pt-0`}
+                >
+                    <Script
+                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+                        strategy="afterInteractive"
+                    />
+                    <Script id="google-analytics" strategy="afterInteractive">
+                        {`
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){window.dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', '${GA_MEASUREMENT_ID}');
+                        `}
+                    </Script>
+                    <div className="mx-auto max-w-[1366px]">
                         <Header />
 
-                        <div className="flex justify-between gap-10 px-5 pb-10 xl:gap-20 md:px-14">
+                        <div className="flex justify-between gap-10 px-5 pb-10 md:px-14 xl:gap-20">
                             {/* left column */}
-                            <div className="flex-col hidden md:flex gap-y-10 shrink-0 w-55">
+                            <div className="hidden w-55 shrink-0 flex-col gap-y-10 md:flex">
                                 <Photo />
                                 <ContactDetails />
                             </div>
 
                             {/* main column */}
-                            <main className="flex flex-col w-full gap-y-12">
+                            <main className="flex w-full flex-col gap-y-12">
                                 {children}
                                 <div className="lg:hidden">
                                     <SpecializationsMenu />
                                 </div>
-                                <div className="text-left md:hidden shrink">
+                                <div className="shrink text-left md:hidden">
                                     <ContactDetails />
                                 </div>
                             </main>
 
                             {/* right column */}
-                            <div className="hidden lg:block shrink-0 w-55">
+                            <div className="hidden w-55 shrink-0 lg:block">
                                 <SpecializationsMenu />
                             </div>
                         </div>
                     </div>
-                    <footer className="hidden mt-8 lg:block">
+                    <footer className="mt-8 hidden lg:block">
                         <Footer />
                     </footer>
-                    <CookiesConsent/>
+                    <CookiesConsent />
                 </body>
             </html>
         </MenuContextProvider>
