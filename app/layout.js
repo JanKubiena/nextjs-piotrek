@@ -18,12 +18,12 @@ export const sora = Sora({
     variable: "--font-sora",
 });
 
-export const ptserif = PT_Serif({
-    weight: ["400", "700"],
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-ptserif",
-});
+// export const ptserif = PT_Serif({
+//     weight: ["400", "700"],
+//     subsets: ["latin"],
+//     display: "swap",
+//     variable: "--font-ptserif",
+// });
 
 export const metadata = {
     title: {
@@ -38,7 +38,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <MenuContextProvider>
-            <html lang="pl" className={`${sora.variable} ${ptserif.variable}`}>
+            <html lang="pl" className={`${sora.variable}`}>
                 <body
                     className={`overscroll-none border-t-[16px] border-pw-gold pt-4 lg:pt-0`}
                 >

@@ -40,7 +40,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: ["var(--font-sora)"],
-                serif: ["var(--font-ptserif)"],
+                // serif: ["var(--font-ptserif)"],
             },
             width: {
                 150: "600px",
