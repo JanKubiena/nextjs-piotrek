@@ -1,20 +1,8 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-    output: 'export',
-    experimental: {
-        appDir: true,
-        typedRoutes: true,
-    },
-    reactStrictMode: true,
+  output: "export",
 };
 
-// module.exports = nextConfig
-
-module.exports = {
-    images: {
-      unoptimized: false,
-    },
-  };
-
-
-
+module.exports = nextConfig;
